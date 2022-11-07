@@ -1,0 +1,49 @@
+.wrapper {
+  width: 879px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #1E2123;
+
+  &>span {
+    margin-right: 25px;
+  }
+
+  &>a:not(:last-child) {
+    margin-right: 15px;
+  }
+
+  &>a:nth-child(2)>svg {
+    width: 23px;
+    height: 23px;
+  }
+  &>a:nth-child(3)>svg {
+    width: 24px;
+    height: 20px;
+  }
+  &>a:nth-child(4)>svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.pay {
+  display: flex;
+  align-items: center;
+
+  &>img:not(:last-child) {
+    margin-right: 15px;
+  }
+  &>img:nth-child(5) {
+    margin-right: 19px;
+  }
+}
+

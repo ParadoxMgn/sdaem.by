@@ -1,0 +1,52 @@
+.wrapper {
+  background-color: #f8f8f8;
+}
+
+.row {
+  padding: 12px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav {
+  flex: 0 1 724px;
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.controls {
+  flex: 0 1 273px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.like {
+  background-color: transparent;
+  flex: 0 1 94px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.link, .like>span {
+  font-size: 14px;
+  line-height: 17px;
+  color: #8291A3;
+}
+
+.auth {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #664EF9;
+}
+
+.icon {
+  margin-right: 5px;
+}

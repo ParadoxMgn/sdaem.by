@@ -1,0 +1,21 @@
+.row {
+  display: flex;
+  align-items: center;
+}
+
+.dot {
+  border-radius: 50%;
+  background-color: #664EF9;
+  width: 3px;
+  height: 3px;
+}
+
+.page {
+  font-size: 14px;
+  line-height: 100%;
+  color: #686868;
+}
+
+.item:not(:last-child) {
+  margin-right: 7px;
+}

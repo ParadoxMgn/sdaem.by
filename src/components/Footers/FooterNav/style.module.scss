@@ -1,0 +1,41 @@
+.nav {
+  margin-bottom: 38px;
+  height: 93px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.list {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  &:nth-child(1) {
+    margin-right: 69px;
+    
+  }
+  &:nth-child(2) {
+    margin-right: 53px;
+  }
+  &:nth-child(3) {
+    margin-right: 97px;
+    height: 67px;
+  }
+}
+
+.link {
+  font-size: 14px;
+  line-height: 17px;
+  color: #8291A3;
+}
+
+.bold {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  color: #1E2123;
+}
+
+.gen {
+  margin-bottom: 2px;
+}

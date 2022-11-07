@@ -1,0 +1,27 @@
+.column {
+  margin-right: 30px;
+  flex: 0 1 297px;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  margin-bottom: 10px;
+}
+
+.title {
+  margin-bottom: 36px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  color: #8291A3;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 13px;
+  color: #8291A3;
+}
