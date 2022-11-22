@@ -1,0 +1,17 @@
+.wrapper {
+  padding: 66px 0 100px;
+  background: linear-gradient(90deg, rgb(148, 175, 255, 0.1) 0%, rgb(78, 100, 249, 0.1) 94.5%);
+}
+
+.title {
+  margin-bottom: 45px;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30px;
+  color: #1E2123;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}

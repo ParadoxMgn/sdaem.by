@@ -7,17 +7,17 @@ import st from './style.module.scss';
 import Container from '../Container';
 
 
-const BreadCrumbs: FC<{ mb: string, page: string }> = ({ mb, page }) => {
+const BreadCrumbs: FC<{ mb: string, page: string, link: string }> = ({ mb, page, link }) => {
 
   return (
     <div className={st.wrapper} style={{marginBottom: `${mb}px`}}>
       <Container>
         <div className={st.row}>
-          <Link to={"#"} className={cn(st.item)}>
+          <Link to={"/"} className={cn(st.item)}>
             <HomeSvg fill={"#664EF9"} />
           </Link>
           <div className={cn(st.item, st.dot)} />
-          <Link to={"#"} className={cn(st.item, st.page)}>
+          <Link to={link} className={cn(st.item, st.page)}>
             {page}
           </Link>
         </div>

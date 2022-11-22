@@ -4,7 +4,7 @@ import Layout from '../../components/Layout';
 import NewsContent from '../../components/News/NewsContent';
 import NewsList from '../../components/News/NewsList';
 import NewsPagination from '../../components/News/NewsPagination';
-import NewsTitleSearch from '../../components/News/NewsTitleSearch';
+import NewsTitleSearch from '../../components/News/NewsHead';
 import { countPages } from '../../utils/countPages';
 
 const News: FC = () => {
@@ -26,14 +26,10 @@ const News: FC = () => {
     getNews(page);
   }, [page]);
 
-  console.log(countPage);
-  
-  
-  
   return (
     <Layout>
       <NewsContent>
-        <BreadCrumbs page="Новости" mb="25" />
+        <BreadCrumbs page="Новости" mb="25" link="/news"/>
         <NewsTitleSearch />
         {/* @ts-ignore */}
         <NewsList news={news} />

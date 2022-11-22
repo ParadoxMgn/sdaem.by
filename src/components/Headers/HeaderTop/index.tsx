@@ -15,10 +15,10 @@ const HeaderTop: FC = () => {
           <nav className={st.nav}>
             <ul className={st.list}>
               <li className={st.item}>
-                <Link to={"#"} className={st.link}>Главная</Link>
+                <Link to={"/"} className={st.link}>Главная</Link>
               </li>
               <li className={st.item}>
-                <Link to={"#"} className={st.link}>Новости</Link>
+                <Link to={"/news"} className={st.link}>Новости</Link>
               </li>
               <li className={st.item}>
                 <Link to={"#"} className={st.link}>Размещение и тарифы</Link>

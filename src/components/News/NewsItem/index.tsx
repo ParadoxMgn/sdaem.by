@@ -19,7 +19,7 @@ const NewsItem: FC = ({ item }) => {
         <div className={st.hr}></div>
         <div className={st.footer}>
           <div className={st.date}>14 Января 2008</div>
-          <Link to={"#"} className={st.btn}>Читать</Link>
+          <Link to={`/news/${item.id}`} className={st.btn}>Читать</Link>
         </div>
       </div>
     </div>
