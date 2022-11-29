@@ -5,6 +5,7 @@ import { FaVk, FaFacebookF, FaViber, FaTelegramPlane, FaWhatsapp } from "react-i
 import st from './style.module.scss';
 import Container from '../../Container';
 import { Link } from 'react-router-dom';
+import BreadCrumbs from '../../BreadCrumbs';
 
 const ArticleHead: FC = () => {
 
@@ -12,8 +13,9 @@ const ArticleHead: FC = () => {
     <div className={st.wrapper}>
       <Container>
         <div className={st.column}>
+          <BreadCrumbs page="Новости" mb="25" link='/news'/>
           <h1 className={st.title}>
-            Название
+            Линия Сталина: суровый отдых в усадьбах на сутки 
           </h1>
           <div className={st.row}>
             <div className={st.date}>14 Января 2008</div>

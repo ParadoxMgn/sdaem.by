@@ -30,7 +30,7 @@ const HeaderTop: FC = () => {
                 </Link>
               </li>
               <li className={st.item}>
-                <Link to={"#"} className={st.link}>Контакты</Link>
+                <Link to={"/contacts"} className={st.link}>Контакты</Link>
               </li>
             </ul>
           </nav>
@@ -39,7 +39,7 @@ const HeaderTop: FC = () => {
               <span>Закладки</span>
               <FiHeart fill='#fff' style={{color: "#8291A3"}} />
             </button>
-            <Link to={"#"} className={st.auth}>Вход и регистрация</Link>
+            <Link to={"/auth"} className={st.auth}>Вход и регистрация</Link>
           </div> 
         </div>
       </Container>

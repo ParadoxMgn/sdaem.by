@@ -38,7 +38,6 @@ const NewsArticle: FC = () => {
   return (
     <Layout>
       <ArticleContent>
-        <BreadCrumbs page="Новости" mb="25" link='/news'/>
         <ArticleHead />
         <ArticleMain />
         {/* @ts-ignore */}
