@@ -1,0 +1,23 @@
+@import '../../../styles/vars';
+
+.nav {
+  flex: 0 1 724px;
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.link {
+  & span {
+    font-size: 14px;
+    line-height: 17px;
+    color: $gray-text;
+  }
+}
+
+.icon {
+  margin-right: 5px;
+}

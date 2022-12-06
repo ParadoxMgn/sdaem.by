@@ -2,16 +2,29 @@
 $font-family: "Inter", sans-serif;
 
 // colors
-$light-color: #fff;
-$dark-color: #282828;
-$gray-color: #F8F8F8;
+$white: #fff;
+$black: #000;
 
-// text-colors
-$text-color: #1E2123;
-$light-text-color: #fff;
-$dark-text-color: #000;
-$gray-text-color: #8291A3;
-$blue-text-color: #664EF9;
+$white-text: #fff;
+$blue-text: #664EF9;
+$light-dark-text: #2B2B2B;
+$gray-text: #8291A3;
+$dark-text: #1E2123;
+
+$white-bg: #fff;
+$light-bg: #f8f8f8;
+$yellow-bg: #FFD54F;
+
+$blue-line-bg: linear-gradient(90deg, #9D94FF 0%, #6B50E9 94.5%);
+
+
+// text-shadow
+
+$ts-01: 0px 1px 2px rgba($black, 0.1);
+
+// box-shadow
+
+$bs-008: 0px 10px 20px rgba($black, 0.08);
 
 // width
 $cw: 1280;

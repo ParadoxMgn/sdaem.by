@@ -1,0 +1,32 @@
+@import '../../../styles/vars';
+
+.controls {
+  flex: 0 1 273px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.like {
+  background-color: transparent;
+  flex: 0 1 94px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  & span {
+    font-size: 14px;
+    line-height: 17px;
+    color: $gray-text;
+  }
+}
+
+.auth {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: $blue-text;
+  &.dark {
+    color: $light-dark-text;
+  }
+}
