@@ -6,35 +6,30 @@ import NewsList from '../../components/News/NewsList';
 import NewsPagination from '../../components/News/NewsPagination';
 import NewsTitleSearch from '../../components/News/NewsHead';
 import { countPages } from '../../utils/countPages';
+import { useGetNewsQuery } from '../../redux/news/news.api';
 
 const News: FC = () => {
 
-  const [news, setNews] = useState([]);
   const [page, setPage] = useState(1);
-  const [countPage, setCountPage] = useState([]);
-
-  //@ts-ignore
-  const getNews = async (page) => {
-    const response = await fetch(`https://jsonplaceholder.typicode.com/posts?_limit=9&_page=${page}`);
-    const data = await response.json();
-    //@ts-ignore
-    setCountPage(countPages(response.headers.get("x-total-count")));
-    setNews(data);
-  }
-
-  useEffect(() => {
-    getNews(page);
-  }, [page]);
+  const { data, isLoading, error } = useGetNewsQuery(9);
 
   return (
     <Layout>
       <NewsContent>
         <BreadCrumbs page="Новости" mb="25" link="/news"/>
         <NewsTitleSearch />
-        {/* @ts-ignore */}
-        <NewsList news={news} />
-        {/* @ts-ignore */}
-        <NewsPagination changePage={setPage} countPage={countPage} currentPage={page} />
+        {
+          isLoading
+            ? 'Loading...'
+            : error
+              ? 'Error...'
+              : <>
+                  {/* @ts-ignore */}
+                  <NewsList news={data} />
+                  {/* @ts-ignore */}
+                  <NewsPagination changePage={setPage} countPage={[1, 2, 3, 4, 5]} currentPage={page} />
+                </>
+        }
       </NewsContent>
     </Layout>
   );
