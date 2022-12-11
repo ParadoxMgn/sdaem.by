@@ -1,13 +1,18 @@
 import { configureStore } from '@reduxjs/toolkit'
-import { setupListeners } from '@reduxjs/toolkit/query'
 import { newsApi } from '../news/news.api'
+import newsReducer from '../reducers/news/newsSlice'
 
 export const store = configureStore({
-  reducer: {[newsApi.reducerPath]: newsApi.reducer},
+  reducer: {
+    [newsApi.reducerPath]: newsApi.reducer,
+    news: newsReducer
+  },
   middleware: getDefaultMiddleware => 
     getDefaultMiddleware().concat(newsApi.middleware)
 })
 
-setupListeners(store.dispatch)
 
-export type TypeRootState = ReturnType<typeof store.getState>
+
+export type RootState = ReturnType<typeof store.getState>
+
+export type AppDispatch = typeof store.dispatch
