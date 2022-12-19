@@ -14,7 +14,13 @@ const NewsPagination: FC = ({ changePage, countPage, currentPage }) => {
           {
             // @ts-ignore
             countPage.map(item => {
-              return (<li key={item} className={cn(st.item, item === currentPage ? st.active : false)} onClick={() => changePage(item)}>{item}</li>)
+              return (
+              <li 
+                key={item}
+                className={cn(st.item, item === currentPage ? st.active : false)}
+                onClick={() => changePage(item)}>
+                {item}
+              </li>)
             })
           }
         </ul>

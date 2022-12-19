@@ -4,49 +4,35 @@ import Layout from '../../components/Layout';
 import NewsContent from '../../components/News/NewsContent';
 import NewsList from '../../components/News/NewsList';
 import NewsPagination from '../../components/News/NewsPagination';
-import NewsTitleSearch from '../../components/News/NewsHead';
+import NewsHead from '../../components/News/NewsHead';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../../redux/store/store';
 import { fetchNews } from '../../redux/thunk/news';
+import { setCurrentPage } from '../../redux/reducers/news/newsSlice';
 
 const News: FC = () => {
 
-  const [page, setPage] = useState(1);
+  // const [page, setPage] = useState(1);
   
-  const news = useSelector((state: RootState) => state.news.news)
-  const countPages = useSelector((state: RootState) => state.news.countPage)
+  const { news, countPage, currentPage, query } = useSelector((state: RootState) => state.news)
   const dispatch = useDispatch()
 
   useEffect(() => {
-    fetchNews(dispatch, page)    
-  }, [page]);
+    fetchNews(dispatch, currentPage, query)
+  }, [currentPage, query]);
 
   return (
     <Layout>
       <NewsContent>
         <BreadCrumbs page="Новости" mb="25" link="/news"/>
-        <NewsTitleSearch />
+        <NewsHead />
         {/* @ts-ignore */}
         <NewsList news={news} />
         {/* @ts-ignore */}
-        <NewsPagination changePage={setPage} countPage={countPages} currentPage={page} />
+        <NewsPagination changePage={page => dispatch(setCurrentPage(page))} countPage={countPage} currentPage={currentPage} />
       </NewsContent>
     </Layout>
   );
 }
 
 export default memo(News);
-
-
-// {
-//   isLoading
-//     ? 'Loading...'
-//     : error
-//       ? 'Error...'
-//       : <>
-//           {/* @ts-ignore */}
-//           <NewsList news={data} />
-//           {/* @ts-ignore */}
-//           <NewsPagination changePage={setPage} countPage={[1, 2, 3, 4, 5]} currentPage={page} />
-//         </>
-// }

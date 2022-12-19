@@ -1,12 +1,20 @@
-import { FC, memo } from 'react';
-import cn from 'classnames';
-import { AiOutlineSearch } from "react-icons/ai";
-
+import { FC, memo, useState } from 'react';
 import st from './style.module.scss';
 import Container from '../../Container';
 import SearchSvg from '../../SvgIcons/SearchSvg';
+import { useDispatch } from 'react-redux/es/hooks/useDispatch';
+import { setCurrentPage, setQuery } from '../../../redux/reducers/news/newsSlice';
 
-const NewsTitleSearch: FC = () => {
+const NewsHead: FC = () => {
+  const [value, setValue] = useState('')
+  const dispatch = useDispatch()
+
+  const search = (e: any) => {
+    e.preventDefault()
+
+    dispatch(setQuery(value))
+    dispatch(setCurrentPage(1))
+  }
 
   return (
     <div className={st.wrapper}>
@@ -15,8 +23,9 @@ const NewsTitleSearch: FC = () => {
           <h1 className={st.title}>
             Новости
           </h1>
-          <form action="#" className={st.form}>
-            <input type='text' className={st.text} />
+          <form action="#" className={st.form} onSubmit={(e: any) => search(e)} >
+            {/* ts-ignore */}
+            <input type='text' value={value} className={st.text} onChange={e => setValue(e.target.value.trim())} />
             <button className={st.btn}>
               <SearchSvg />
             </button>
@@ -27,4 +36,4 @@ const NewsTitleSearch: FC = () => {
   );
 }
 
-export default memo(NewsTitleSearch);
+export default memo(NewsHead);
