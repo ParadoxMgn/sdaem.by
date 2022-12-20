@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@bem-react/classname": "^1.5.12",
+    "@hookform/resolvers": "^2.9.10",
     "@reduxjs/toolkit": "^1.9.1",
     "@types/qs": "^6.9.7",
     "axios": "^1.2.1",
@@ -17,10 +18,13 @@
     "qs": "^6.11.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-hook-form": "^7.41.0",
     "react-icons": "^4.6.0",
     "react-redux": "^8.0.5",
     "react-router-dom": "^6.4.3",
-    "sass": "^1.56.0"
+    "sass": "^1.56.0",
+    "yap": "^0.0.2",
+    "yup": "^0.32.11"
   },
   "devDependencies": {
     "@types/react": "^18.0.22",

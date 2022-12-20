@@ -10,6 +10,7 @@ import PhoneSvg from '../SvgIcons/PhoneSvg';
 import MailSvg from '../SvgIcons/MailSvg';
 import ClockSvg from '../SvgIcons/ClockSvg';
 import AttentionSvg from '../SvgIcons/AttentionSvg';
+import ContactsForm from '../ContactsForm';
 
 const ContactsContent: FC = () => {
 
@@ -66,25 +67,7 @@ const ContactsContent: FC = () => {
               <p>Администрация сайта не владеет информацией о наличии свободных квартир</p>
             </div>
           </div>
-          <div className={cn(st.form)}>
-            <form action='#'>
-              <div className={cn(st.inputs)}>
-                <label className={cn(st["label-input"])}>
-                  <p>Ваше имя</p>
-                  <input className={cn(st.name)} type="text" placeholder='Введите' />
-                </label>
-                <label className={cn(st["label-input"])}>
-                  <p>Ваша электронная почта</p>
-                  <input className={cn(st.mails)} type="email" placeholder='Введите' />
-                </label>
-              </div>
-              <label className={cn(st["label-text"])}>
-                <p>Ваше сообщение</p>
-                <textarea className={cn(st.textarea)} placeholder='Сообщение'></textarea>
-              </label>
-              <button className={cn(st.btn)}>Отправить</button>
-            </form>
-          </div>
+          <ContactsForm />
           <div className={cn(st.social)}>
             <Link to={"#"} className={st.circle}>
               <FaInstagram fill='#fff' size='1.5em' />
